@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-load-grunt-tasks/load-grunt-tasks/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-load-grunt-tasks/node_modules/load-grunt-tasks/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-load-grunt-tasks">npmtest-load-grunt-tasks (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-load-grunt-tasks/load-grunt-tasks/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-load-grunt-tasks/node_modules/load-grunt-tasks/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">27.27% <small>(6 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-load-grunt-tasks/load-grunt-tasks/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-load-grunt-tasks/node_modules/load-grunt-tasks/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -295,43 +297,42 @@ var multimatch = require('multimatch');
 var arrify = require('arrify');
 var resolvePkg = require('resolve-pkg');
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function (grunt, opts) {</span>
-<span class="cstat-no" title="statement not covered">	opts = opts || {};</span>
+module.exports = <span class="fstat-no" title="function not covered" >function (grunt, opts) {</span>
+<span class="cstat-no" title="statement not covered" >	opts = opts || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var pattern = arrify(opts.pattern || ['grunt-*', '@*/grunt-*']);</span>
-<span class="cstat-no" title="statement not covered">	var config = opts.config || pkgUp.sync();</span>
-<span class="cstat-no" title="statement not covered">	var scope = arrify(opts.scope || ['dependencies', 'devDependencies', 'peerDependencies', 'optionalDependencies']);</span>
+<span class="cstat-no" title="statement not covered" >	var pattern = arrify(opts.pattern || ['grunt-*', '@*/grunt-*']);</span>
+<span class="cstat-no" title="statement not covered" >	var config = opts.config || pkgUp.sync();</span>
+<span class="cstat-no" title="statement not covered" >	var scope = arrify(opts.scope || ['dependencies', 'devDependencies', 'peerDependencies', 'optionalDependencies']);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (typeof config === 'string') {</span>
-<span class="cstat-no" title="statement not covered">		config = require(path.resolve(config));</span>
+<span class="cstat-no" title="statement not covered" >	if (typeof config === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >		config = require(path.resolve(config));</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	pattern.push('!grunt', '!grunt-cli');</span>
+<span class="cstat-no" title="statement not covered" >	pattern.push('!grunt', '!grunt-cli');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var names = scope.reduce(<span class="fstat-no" title="function not covered">function (result, prop) {</span></span>
-<span class="cstat-no" title="statement not covered">		var deps = config[prop] || [];</span>
-<span class="cstat-no" title="statement not covered">		return result.concat(Array.isArray(deps) ? deps : Object.keys(deps));</span>
+<span class="cstat-no" title="statement not covered" >	var names = scope.reduce(<span class="fstat-no" title="function not covered" >function (result, prop) {</span></span>
+<span class="cstat-no" title="statement not covered" >		var deps = config[prop] || [];</span>
+<span class="cstat-no" title="statement not covered" >		return result.concat(Array.isArray(deps) ? deps : Object.keys(deps));</span>
 	}, []);
 &nbsp;
-<span class="cstat-no" title="statement not covered">	multimatch(names, pattern).forEach(<span class="fstat-no" title="function not covered">function (pkgName) {</span></span>
-<span class="cstat-no" title="statement not covered">		if (opts.requireResolution === true) {</span>
-<span class="cstat-no" title="statement not covered">			try {</span>
-<span class="cstat-no" title="statement not covered">				grunt.loadTasks(resolvePkg(path.join(pkgName, 'tasks')));</span>
+<span class="cstat-no" title="statement not covered" >	multimatch(names, pattern).forEach(<span class="fstat-no" title="function not covered" >function (pkgName) {</span></span>
+<span class="cstat-no" title="statement not covered" >		if (opts.requireResolution === true) {</span>
+<span class="cstat-no" title="statement not covered" >			try {</span>
+<span class="cstat-no" title="statement not covered" >				grunt.loadTasks(resolvePkg(path.join(pkgName, 'tasks')));</span>
 			} catch (err) {
-<span class="cstat-no" title="statement not covered">				grunt.log.error('npm package "' + pkgName + '" not found. Is it installed?');</span>
+<span class="cstat-no" title="statement not covered" >				grunt.log.error('npm package "' + pkgName + '" not found. Is it installed?');</span>
 			}
 		} else {
-<span class="cstat-no" title="statement not covered">			grunt.loadNpmTasks(pkgName);</span>
+<span class="cstat-no" title="statement not covered" >			grunt.loadNpmTasks(pkgName);</span>
 		}
 	});
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 10:16:34 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 12:03:20 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
