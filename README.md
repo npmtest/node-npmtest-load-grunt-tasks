@@ -1,4 +1,7 @@
-# test coverage for  [load-grunt-tasks (v3.5.2)](https://github.com/sindresorhus/load-grunt-tasks#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-load-grunt-tasks.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-load-grunt-tasks) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-load-grunt-tasks.svg)](https://travis-ci.org/npmtest/node-npmtest-load-grunt-tasks)
+# npmtest-load-grunt-tasks
+
+#### test coverage for  [load-grunt-tasks (v3.5.2)](https://github.com/sindresorhus/load-grunt-tasks#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-load-grunt-tasks.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-load-grunt-tasks) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-load-grunt-tasks.svg)](https://travis-ci.org/npmtest/node-npmtest-load-grunt-tasks)
+
 #### Load multiple grunt tasks using globbing patterns
 
 [![NPM](https://nodei.co/npm/load-grunt-tasks.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/load-grunt-tasks)
